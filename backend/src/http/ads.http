@@ -1,0 +1,51 @@
+GET http://localhost:4000/ad?title=bike
+
+###
+
+GET http://localhost:4000/ad/4
+
+###
+
+GET http://localhost:4000/ad
+
+###
+POST http://localhost:4000/ad
+Content-Type: application/json
+
+{
+    "title": "Ordinateur to sell",
+    "description": "My fly is yellow, working fine. I'm selling it because I've got a new one",
+    "owner": "fly.seller@gmail.com",
+    "price": 10000000,
+    "imageUrl": "https://images.lecho.be/view?iid=dc:113129565&context=ONLINE&ratio=16/9&width=640&u=1508242455000",
+    "location": "Strasbourg",
+    "createdAt": "2023-09-05T10:13:14.755Z",
+    "category" : 2,
+    "tags": [{"id":1},{"id":2}]
+}
+
+###
+DELETE http://localhost:4000/ad
+Content-Type: application/json
+
+{
+  "id": 10
+}
+
+###
+PUT http://localhost:4000/ad
+Content-Type: application/json
+
+{
+  "idToEdit": 16,
+  "newAd": {
+        "title": "Book",
+        "description":
+            "My hoverboard is green, working fine. I'm selling it because I've got a new one",
+        "owner": "hoverboard.seller@gmail.com",
+        "price": 200,
+        "picture":"https://images.lecho.be/view?iid=dc:113129565&context=ONLINE&ratio=16/9&width=640&u=1508242455000",
+        "location": "Paris",
+        "createdAt": "2023-09-05T10:13:14.755Z"
+  } 
+}
